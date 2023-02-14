@@ -12,9 +12,14 @@
 (function() {
     'use strict';
 
-    setTimeout(()=>{
-        let assignments = Array.from(document.getElementsByClassName("ig-details__item assignment-date-available"));
-        assignments.forEach(assignment => {assignment.style.display = 'none'})
-    },3000)
+    let init_timeout = 500
+
+    for(var i = 1; i < 10; i++){
+        setTimeout(()=>{
+            let assignments = Array.from(document.getElementsByClassName("ig-details__item assignment-date-available"));
+            assignments.forEach(assignment => {assignment.style.display = 'none'})
+        },i*init_timeout)
+
+    }
 
 })();
